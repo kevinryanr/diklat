@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas Mengenal ES6</title>
+</head>
+<body>
+	<script>
+		// 1. Arrow
+		var golden = (goldenFunction) => {
+		    //function
+		    return () => {
+		        console.log("this is golden!!")
+		    }
+		}
+
+
+
+		// 2. Object literal
+		function newFunction(firstname, lastname) {
+	        return {
+	            firstname,
+	            lastname,
+			    fullName: function(){
+			      console.log(firstName + " " + lastName)
+			      return 
+			    }
+	        }
+	    }
+	    newFunction("William", "Imoh");
+
+
+
+		// 3 Destructuring
+		let newObject = {
+		  firstName: "Harry",
+		  lastName: "Potter Holt",
+		  destination: "Hogwarts React Conf",
+		  occupation: "Deve-wizard Avocado",
+		  spell: "Vimulus Renderus!!!"
+		};
+		 
+		const { firstName, lastName, destination, occupation, spell  } = newObject;
+		console.log(firstName, lastName, destination, occupation, spell);
+
+
+
+		// 4 Array Spreading
+		const west = ["Will", "Chris", "Sam", "Holly"]
+		const east = ["Gill", "Brian", "Noel", "Maggie"]
+		 
+		let combinedArray = [...west, ...east]
+		console.log(combinedArray) 
+
+
+
+		// 5 Template Literals
+		const planet = "earth"
+		const view = "glass"
+		var before = 'Lorem ' + view + ' dolor sit amet, ' + 'consectetur adipiscing elit, ' + planet + ' do eiusmod tempor ' + 'incididunt ut labore et dolore magna aliqua. Ut enim' + ' ad minim veniam'
+		 
+		const theString = `${before}`
+		console.log(theString)
+
+	</script>
+</body>
+</html>
